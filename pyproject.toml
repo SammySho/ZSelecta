@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "zselecta"
+version = "0.1.0"
+description = "Auto-focus z-stack selection and VSI-to-PNG conversion for microscopy images."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "Sammy Shorthouse" },
+    { name = "Aya Elghajiji" },
+    { name = "Qiang Liu" },
+    { name = "James Armstrong" },
+]
+dependencies = [
+    "jpype1",
+    "scikit-image",
+    "numpy",
+    "Pillow",
+    "typer[all]",
+]
+
+[project.scripts]
+zselecta = "zselecta.cli:app"
